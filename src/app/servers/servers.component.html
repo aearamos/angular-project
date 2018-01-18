@@ -1,0 +1,75 @@
+<label>Server Name</label>
+<!-- <input 
+	type="text" 
+	class="form-control"
+	(input)="onUpdateServerName($event)"> -->
+
+<input 
+	type="text" 
+	class="form-control"
+	[(ngModel)]="serverName">
+
+<!-- <p> {{serverName}} </p>-->
+<br>
+ <button 
+	class="btn btn-primary"
+	[disabled]="!allowNewServer"
+	(click)="onCreateServer()"> Add Server </button>
+<!--><p [innerText]= "allowNewServer"></p></!-->
+<!-- <p>{{ serverCreationStatus }}</p>-->
+<br>
+<p *ngIf="serverCreated">Server was created, server name is {{serverName}} </p>
+
+<!--> show how ng-template and else works </!-->
+<!-- <p *ngIf="serverCreated; else noServer">Server was created, server name is {{serverName}} </p> -->
+<!-- <ng-template #noServer>
+	<p>No server was created!</p>
+</ng-template> -->
+
+<br>
+ <app-server *ngFor="let server of servers"></app-server>
+
+<hr>
+
+
+<!--> Directives </!-->
+
+<!--> typically directives are added by using attributes </!-->
+<!--> ngif is a structural directive (requires the *) and changes te structure of the dom by adding an element or not adding at all</!-->
+<!--> ngif has to result in a true or false statement</!-->
+<!--> The # is a local reference</!-->
+<!--> ng-template is a component you can use to mark places in the DOM</!-->
+<!--> With ng-template you mark a spot where you want to have a condition</!-->
+<!--> unlike structural directives, attribute directives don't add or remove elements, they only change the element they were placed on</!-->
+<!--> ngfor - let anyname for 'property defined in typescript file'. This loops through all the elements in this array and assign the individual element to the dynamical server variable</!-->
+
+<!--> === is to check something and = is to assign a value </!-->
+
+<!--> the [] indicates to angular we're using property binding to dinamically bind some property, like disabling or enabling the button (html attribute) /!-->
+
+<!-->so, with the allowNewServer property, everytime I reload the page the button will take 2 seconds to be enabled -> property binding!!! </!-->
+
+<!-->print some text to your template you use string interpolation the {{}} </!-->
+
+<!-->if you want to change some property of an html element (directive or component) you use property binding (the []) </!-->
+
+<!--> for event binding you use () </!-->
+
+<!--> $event is a reserved variable name that will respond to the event between " ", when clicked </!-->
+
+
+
+<!--> Task 2 on data binding</!-->
+<!-- <label>User Name</label>
+<input 
+	type="text" 
+	class="form-control"
+	[(ngModel)]="username">
+<hr>
+<p> {{username}} </p>
+<hr>
+<button 
+	class="btn btn-primary"
+	[disabled]="username === '' "
+	(click)="username = '' "> Reset User </button>
+ -->

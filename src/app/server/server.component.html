@@ -1,0 +1,11 @@
+<p 
+	[ngStyle]="{backgroundColor: getColor()}"
+	[ngClass]="{online: serverStatus === 'online'}">
+	 {{ 'Server' }} with ID {{ serverid }} is {{ getServerStatus() }} </p>
+
+
+<!--> ngstyle to change the style of a component depending on some condition </!-->
+<!--> Here we have ngstyle directive added like an attribute also using property binding to configure</!-->
+<!--> ngstyle allows us to dynamically assign a style</!-->
+<!--> ngclass allows us to dynamically add or remove classes</!-->
+<!--> both only working using property binding</!-->
