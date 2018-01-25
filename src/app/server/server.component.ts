@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   //pass a javascript object to the decorator
   // this unique name allows to use this component in other components in a html file
   selector: 'app-server',
-  templateUrl: './server.component.html'
+  templateUrl: './server.component.html',
   styles: [`
 	.online{
 		color: white;
